@@ -85,6 +85,11 @@ ibg();
 // 	},
 // });
 
+let swiper = new Swiper(".expertSwiper", {
+	slidesPerView: 3,
+	freeMode: true,
+});
+
 
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
