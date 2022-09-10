@@ -224,12 +224,24 @@ function ibg() {
 }
 ibg();
 
+let swiperExpert = new Swiper(".expertSwiper", {
+	slidesPerView: 3,
+	freeMode: true,
+	breakpoints: {
+		359.98: {
+			slidesPerView: 2,
+		},
+		575.98: {
+			slidesPerView: 3,
+		},
+	},
+});
 
 let swiper = new Swiper(".mySwiper", {
 	effect: "coverflow",
 	grabCursor: true,
 	centeredSlides: true,
-	slidesPerView: "auto",
+	spaceBetween: 30,
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,
@@ -238,12 +250,32 @@ let swiper = new Swiper(".mySwiper", {
 		slideShadows: true,
 	},
 	loop: true,
+	breakpoints: {
+		359.98: {
+			slidesPerView: 2,
+			coverflowEffect: {
+				depth: 300,
+			},
+		},
+		575.98: {
+			slidesPerView: "auto",
+		},
+		767.98: {
+			slidesPerView: 3,
+		},
+		850.98: {
+			slidesPerView: 2,
+		},
+		991.98: {
+			slidesPerView: 3,
+		},
+		1199.98: {
+			slidesPerView: "auto",
+		},
+	},
 });
 
-let swiperExpert = new Swiper(".expertSwiper", {
-	slidesPerView: 3,
-	freeMode: true,
-});
+
 
 
 $(document).ready(function () {
