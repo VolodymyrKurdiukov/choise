@@ -71,6 +71,21 @@ function ibg() {
 ibg();
 
 
+// let swiper = new Swiper(".mySwiper", {
+// 	effect: "coverflow",
+// 	grabCursor: true,
+// 	centeredSlides: true,
+// 	slidesPerView: "auto",
+// 	coverflowEffect: {
+// 		rotate: 0,
+// 		stretch: 0,
+// 		depth: 200,
+// 		modifier: 1,
+// 		slideShadows: true,
+// 	},
+// });
+
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
