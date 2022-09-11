@@ -224,7 +224,18 @@ function ibg() {
 }
 ibg();
 
-
+let swiperQualification = new Swiper(".qualificationSwiper", {
+	slidesPerView: 4,
+	freeMode: true,
+	breakpoints: {
+		359.98: {
+			slidesPerView: 2,
+		},
+		767.98: {
+			slidesPerView: 4,
+		},
+	},
+});
 
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
