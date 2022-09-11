@@ -233,4 +233,28 @@ $(document).ready(function () {
 	$('.menu-page__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+	$('.filter-team__btn-plus').click(function (event) {
+		$('.filter-team__btn-plus,.item-filter').toggleClass('active');
+	});
+
+
+	$('.checkbox1__label1').click(function (event) {
+		$('.checkbox1__list1,.checkbox1__label1').toggleClass('active');
+	});
+
+	$('.checkbox2__label2').click(function (event) {
+		$('.checkbox2__list2,.checkbox2__label2').toggleClass('active');
+	});
+
+	$('.filter-team__btn-plus').click(function () {
+		if ($(this).attr('data-show') === "true") {
+			$(this).text("закрыть");
+			$(this).attr('data-show', "false");
+		}
+		else {
+			$(this).text("добавить фильтр");
+			$(this).attr('data-show', "true");
+		}
+	});
 });
