@@ -237,6 +237,7 @@ let swiperQualification = new Swiper(".qualificationSwiper", {
 	},
 });
 
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
