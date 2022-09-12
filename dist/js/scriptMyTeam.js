@@ -236,6 +236,18 @@ noUiSlider.create(rangeSlider, {
 	}
 });
 
+const priceStart = document.getElementById('price-start');
+const priceEnd = document.getElementById('price-end');
+priceStart.addEventListener('change', function () {
+	rangeSlider.noUiSlider.set(priceStart.value);
+});
+
+priceEnd.addEventListener('change', function () {
+	rangeSlider.noUiSlider.set(priceEnd.value);
+});
+
+
+
 
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
