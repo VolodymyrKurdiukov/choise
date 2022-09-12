@@ -252,7 +252,7 @@ let swiper = new Swiper(".mySwiper", {
 		rotate: 0,
 		stretch: 0,
 		depth: 200,
-		modifier: 1,
+		modifier: 0.8,
 		slideShadows: true,
 	},
 	loop: true,
