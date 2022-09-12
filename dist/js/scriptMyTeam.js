@@ -298,6 +298,35 @@ $(document).ready(function () {
 		$('.filter-team__btn-plus,.item-filter').toggleClass('active');
 	});
 
+	$('.filter-team__name-1').click(function (event) {
+		$('.client-info-1 ').addClass('active');
+	});
+	$('.filter-team__name-2').click(function (event) {
+		$('.client-info-2 ').addClass('active');
+	});
+	$('.filter-team__name-3').click(function (event) {
+		$('.client-info-3 ').addClass('active');
+	});
+	$('.filter-team__name-4').click(function (event) {
+		$('.client-info-4 ').addClass('active');
+	});
+	$('.filter-team__name-5').click(function (event) {
+		$('.client-info-5 ').addClass('active');
+	});
+	$('.filter-team__name-6').click(function (event) {
+		$('.client-info-6 ').addClass('active');
+	});
+	$('.filter-team__name-7').click(function (event) {
+		$('.client-info-7 ').addClass('active');
+	});
+	$('.filter-team__name-8').click(function (event) {
+		$('.client-info-8 ').addClass('active');
+	});
+
+	$('.client-info__btn').click(function (event) {
+		$('.client-info ').removeClass('active');
+	});
+
 
 	$('.checkbox1__label1').click(function (event) {
 		$('.checkbox1__list1,.checkbox1__label1').toggleClass('active');
