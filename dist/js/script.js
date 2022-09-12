@@ -227,6 +227,12 @@ ibg();
 let swiperExpert = new Swiper(".expertSwiper", {
 	slidesPerView: 3,
 	freeMode: true,
+	speed: 5000,
+	loop: true,
+	effect: 'slide',
+	autoplay: {
+		delay: 0,
+	},
 	breakpoints: {
 		359.98: {
 			slidesPerView: 2,
