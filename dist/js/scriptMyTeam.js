@@ -225,6 +225,18 @@ function ibg() {
 ibg();
 
 
+const rangeSlider = document.querySelector('.range-filter__slider');
+
+noUiSlider.create(rangeSlider, {
+	start: [0, 25],
+	connect: false,
+	range: {
+		'min': 0,
+		'max': 25
+	}
+});
+
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
@@ -249,11 +261,11 @@ $(document).ready(function () {
 
 	$('.filter-team__btn-plus').click(function () {
 		if ($(this).attr('data-show') === "true") {
-			$(this).text("закрыть");
+			$(this).html("<span></span>" + "закрыть");
 			$(this).attr('data-show', "false");
 		}
 		else {
-			$(this).text("добавить фильтр");
+			$(this).html("<span></span>" + "добавить фильтр");
 			$(this).attr('data-show', "true");
 		}
 	});
