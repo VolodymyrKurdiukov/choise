@@ -244,7 +244,7 @@ let swiperExpert = new Swiper(".expertSwiper", {
 });
 
 let swiper = new Swiper(".mySwiper", {
-	effect: "coverflow",
+	effect: 'coverflow',
 	grabCursor: true,
 	centeredSlides: true,
 	spaceBetween: 30,

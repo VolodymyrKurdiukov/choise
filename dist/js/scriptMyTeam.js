@@ -238,16 +238,52 @@ noUiSlider.create(rangeSlider, {
 
 const priceStart = document.getElementById('price-start');
 const priceEnd = document.getElementById('price-end');
-priceStart.addEventListener('change', function () {
-	rangeSlider.noUiSlider.set(priceStart.value);
+priceStart.addEventListener('change', setPriceValues);
+priceEnd.addEventListener('change', setPriceValues);
+
+function setPriceValues() {
+	let priceStartValue;
+	let priceEndValue;
+	if (priceStart.value != '') {
+		priceStartValue = priceStart.value;
+	}
+	if (priceEnd.value != '') {
+		priceEndValue = priceEnd.value;
+	}
+	rangeSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+}
+
+
+
+
+const rangeSliderTwo = document.querySelector('.range-filter__slider-2');
+
+noUiSlider.create(rangeSliderTwo, {
+	start: [0, 25],
+	connect: false,
+	range: {
+		'min': 0,
+		'max': 25
+	}
 });
 
-priceEnd.addEventListener('change', function () {
-	rangeSlider.noUiSlider.set(priceEnd.value);
-});
 
+const volumeStart = document.getElementById('volume-start');
+const volumeEnd = document.getElementById('volume-end');
+volumeStart.addEventListener('change', setVolumeValues);
+volumeEnd.addEventListener('change', setVolumeValues);
 
-
+function setVolumeValues() {
+	let volumeStartValue;
+	let volumeEndValue;
+	if (volumeStart.value != '') {
+		volumeStartValue = volumeStart.value;
+	}
+	if (volumeEnd.value != '') {
+		volumeEndValue = volumeEnd.value;
+	}
+	rangeSliderTwo.noUiSlider.set([volumeStartValue, volumeEndValue]);
+}
 
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
