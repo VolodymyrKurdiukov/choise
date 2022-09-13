@@ -246,7 +246,29 @@ let mediaSlider = new Swiper('.media-slider__wrapper', {
 		dragClass: "media-slider__drag-scroll",
 		draggable: true
 	},
-})
+});
+
+let mediaSliderBottom = new Swiper('.media-slider-bottom__wrapper', {
+	wrapperClass: "media-slider-bottom__row",
+	slideClass: "media-slider-bottom__column",
+	direction: 'horizontal',
+	slidesPerView: 'auto',
+	watchOverFlow: true,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	speed: 1000,
+	navigation: {
+		nextEl: ".media-slider-bottom__next",
+		prevEl: ".media-slider-bottom__prev",
+	},
+	breakpoints: {
+		768: {
+			loop: true,
+			speed: 2000,
+		},
+	},
+});
 
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
