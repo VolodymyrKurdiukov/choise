@@ -261,4 +261,11 @@ $(document).ready(function () {
 		$(this).toggleClass('active').prev().slideToggle(300);
 		$('.text__more').toggleClass('active');
 	});
+
+	$('.tags-media__top').click(function (event) {
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
+	$('.categories-media__top').click(function (event) {
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
 });
