@@ -239,23 +239,38 @@ $(document).ready(function () {
 	
 	$('.item-receipt__body-1').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-1').toggleClass('active');
+
 	});
 	$('.item-receipt__body-2').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-2').toggleClass('active');
 	});
 	$('.item-receipt__body-3').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-3').toggleClass('active');
 	});
 	$('.item-receipt__body-4').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-4').toggleClass('active');
 	});
 	$('.item-receipt__body-5').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-5').toggleClass('active');
 	});
 	$('.item-receipt__body-6').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-6').toggleClass('active');
 	});
 	$('.item-receipt__body-7').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
+		$('.item-receipt-7').toggleClass('active');
 	});
 });
+
+
+
+// $('.header__burger').click(function (event) {
+// 	$('.header__burger,.header__menu').toggleClass('active');
+// 	$('body').toggleClass('lock');
+// });
