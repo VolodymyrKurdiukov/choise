@@ -248,6 +248,11 @@ let swiper = new Swiper(".mySwiper", {
 	grabCursor: true,
 	centeredSlides: true,
 	spaceBetween: 30,
+	speed: 5000,
+	loop: true,
+	autoplay: {
+		delay: 0,
+	},
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,
@@ -255,7 +260,6 @@ let swiper = new Swiper(".mySwiper", {
 		modifier: 0.8,
 		slideShadows: true,
 	},
-	loop: true,
 	breakpoints: {
 		359.98: {
 			slidesPerView: 2,
