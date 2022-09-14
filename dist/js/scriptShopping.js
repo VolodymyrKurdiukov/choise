@@ -233,4 +233,56 @@ $(document).ready(function () {
 	$('.menu-page__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+	// $('.shopping__column').click(function (event) {
+	// 	if ($('.shopping__body').hasClass('one')) {
+	// 		$('.shopping__column').not($(this)).removeClass('active');
+	// 		$('.hide-shopping').not($(this).next()).slideUp(300);
+	// 	}
+	// 	$(this).toggleClass('active').next().slideToggle(300);
+	// });
+
+
+	$('.shopping__icon-info-top-1').click(function (event) {
+		$('.hide-shopping-top-1').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-2').click(function (event) {
+		$('.hide-shopping-top-2').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-3').click(function (event) {
+		$('.hide-shopping-top-3').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-4').click(function (event) {
+		$('.hide-shopping-top-4').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-5').click(function (event) {
+		$('.hide-shopping-top-5').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-6').click(function (event) {
+		$('.hide-shopping-top-6').slideToggle(300);
+	});
+	$('.shopping__icon-info-top-7').click(function (event) {
+		$('.hide-shopping-top-7').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-1').click(function (event) {
+		$('.hide-shopping-bottom-1').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-2').click(function (event) {
+		$('.hide-shopping-bottom-2').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-3').click(function (event) {
+		$('.hide-shopping-bottom-3').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-4').click(function (event) {
+		$('.hide-shopping-bottom-4').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-5').click(function (event) {
+		$('.hide-shopping-bottom-5').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-6').click(function (event) {
+		$('.hide-shopping-bottom-6').slideToggle(300);
+	});
+	$('.shopping__icon-info-bottom-7').click(function (event) {
+		$('.hide-shopping-bottom-7').slideToggle(300);
+	});
 });
