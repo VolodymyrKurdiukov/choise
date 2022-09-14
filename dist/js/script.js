@@ -227,7 +227,7 @@ ibg();
 let swiperExpert = new Swiper(".expertSwiper", {
 	slidesPerView: 3,
 	freeMode: true,
-	speed: 5000,
+	speed: 3000,
 	loop: true,
 	effect: 'slide',
 	autoplay: {
@@ -248,7 +248,7 @@ let swiper = new Swiper(".mySwiper", {
 	grabCursor: true,
 	centeredSlides: true,
 	spaceBetween: 30,
-	speed: 5000,
+	speed: 3000,
 	loop: true,
 	autoplay: {
 		delay: 0,
