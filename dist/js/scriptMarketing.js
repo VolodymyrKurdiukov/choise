@@ -225,6 +225,26 @@ function ibg() {
 ibg();
 
 
+let marketingSlider = new Swiper('.slider-marketing__wrapper', {
+	wrapperClass: "slider-marketing__body",
+	slideClass: "slider-marketing__slide",
+	direction: 'vertical',
+	slidesPerView: 'auto',
+	speed: 800,
+	mousewheel: {
+		sensitivity: 1,
+	},
+	watchOverFlow: true,
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
+	scrollbar: {
+		el: '.slider-marketing__scroll',
+		dragClass: "slider-marketing__drag-scroll",
+		draggable: true
+	},
+});
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
