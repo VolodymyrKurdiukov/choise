@@ -233,6 +233,14 @@ $(document).ready(function () {
 	$('.menu-page__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+	$('.optima__btn-alloptima').click(function (event) {
+		$('.optima-hide__items').slideToggle(300);
+	});
+
+	$('.person-value__btn-units').click(function (event) {
+		$('.person-value-hide__units').slideToggle(300);
+	});
 });
 
 jQuery(($) => {
