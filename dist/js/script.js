@@ -296,4 +296,26 @@ $(document).ready(function () {
 	$('.menu-page__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+	$('.liders__btn').click(function (event) {
+		$('.liders-hide').slideToggle(300);
+	});
+	$('.liders__btn').click(function () {
+		if ($(this).attr('data-show') === "true") {
+			$(this).html("закрыть");
+			$(this).attr('data-show', "false");
+		}
+		else {
+			$(this).html("смотреть больше");
+			$(this).attr('data-show', "true");
+		}
+	});
+});
+
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
 });

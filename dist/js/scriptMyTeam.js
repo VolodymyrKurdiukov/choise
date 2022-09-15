@@ -346,4 +346,28 @@ $(document).ready(function () {
 			$(this).attr('data-show', "true");
 		}
 	});
+
+	$('.filter-team__btn-more').click(function (event) {
+		$('.filter-team-columns-hide').slideToggle(300);
+	});
+	$('.filter-team__btn-more').click(function () {
+		if ($(this).attr('data-show') === "true") {
+			$(this).html("закрыть");
+			$(this).attr('data-show', "false");
+		}
+		else {
+			$(this).html("смотреть больше");
+			$(this).attr('data-show', "true");
+		}
+	});
+
+
+});
+
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
 });

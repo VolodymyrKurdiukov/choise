@@ -244,45 +244,67 @@ $(document).ready(function () {
 
 
 	$('.shopping__icon-info-top-1').click(function (event) {
+		$('.shopping__1-1').toggleClass('active');
 		$('.hide-shopping-top-1').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-2').click(function (event) {
+		$('.shopping__1-2').toggleClass('active');
 		$('.hide-shopping-top-2').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-3').click(function (event) {
+		$('.shopping__1-3').toggleClass('active');
 		$('.hide-shopping-top-3').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-4').click(function (event) {
+		$('.shopping__1-4').toggleClass('active');
 		$('.hide-shopping-top-4').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-5').click(function (event) {
+		$('.shopping__1-5').toggleClass('active');
 		$('.hide-shopping-top-5').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-6').click(function (event) {
+		$('.shopping__1-6').toggleClass('active');
 		$('.hide-shopping-top-6').slideToggle(300);
 	});
 	$('.shopping__icon-info-top-7').click(function (event) {
+		$('.shopping__1-7').toggleClass('active');
 		$('.hide-shopping-top-7').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-1').click(function (event) {
+		$('.shopping__1-bottom-1').toggleClass('active');
 		$('.hide-shopping-bottom-1').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-2').click(function (event) {
+		$('.shopping__1-bottom-2').toggleClass('active');
 		$('.hide-shopping-bottom-2').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-3').click(function (event) {
+		$('.shopping__1-bottom-3').toggleClass('active');
 		$('.hide-shopping-bottom-3').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-4').click(function (event) {
+		$('.shopping__1-bottom-4').toggleClass('active');
 		$('.hide-shopping-bottom-4').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-5').click(function (event) {
+		$('.shopping__1-bottom-5').toggleClass('active');
 		$('.hide-shopping-bottom-5').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-6').click(function (event) {
+		$('.shopping__1-bottom-6').toggleClass('active');
 		$('.hide-shopping-bottom-6').slideToggle(300);
 	});
 	$('.shopping__icon-info-bottom-7').click(function (event) {
+		$('.shopping__1-bottom-7').toggleClass('active');
 		$('.hide-shopping-bottom-7').slideToggle(300);
 	});
+});
+
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
 });

@@ -234,3 +234,11 @@ $(document).ready(function () {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
 });
+
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
+});

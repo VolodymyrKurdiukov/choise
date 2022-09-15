@@ -182,21 +182,22 @@ const isMobile = {
 	}
 };
 
-if (isMobile.any()) {
-	document.body.classList.add('touch');
+// if (isMobile.any()) {
+// 	document.body.classList.add('touch');
 
-	let menuArrows = document.querySelectorAll('.menu__arrow');
-	if (menuArrows.length > 0) {
-		for (let index = 0; index < menuArrows.length; index++) {
-			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function (e) {
-				menuArrow.parentElement.classList.toggle('active');
-			});
-		}
-	}
-} else {
-	document.body.classList.add('pc');
-}
+// 	let menuArrows = document.querySelectorAll('.menu__arrow');
+// 	if (menuArrows.length > 0) {
+// 		for (let index = 0; index < menuArrows.length; index++) {
+// 			const menuArrow = menuArrows[index];
+// 			menuArrow.addEventListener("click", function (e) {
+// 				menuArrow.parentElement.classList.toggle('active');
+// 			});
+// 		}
+// 	}
+// } else {
+// 	document.body.classList.add('pc');
+// }
+
 //..........................................................................................................................
 
 
@@ -232,6 +233,9 @@ let swiperQualification = new Swiper(".qualificationSwiper", {
 			slidesPerView: 2,
 		},
 		767.98: {
+			slidesPerView: 3,
+		},
+		1010.98: {
 			slidesPerView: 4,
 		},
 	},
@@ -246,4 +250,26 @@ $(document).ready(function () {
 	$('.menu-page__link-arrow').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
+
+	$('.teamleaders__btn').click(function (event) {
+		$('.teamleader-hidden-columns').slideToggle(300);
+	});
+	$('.teamleaders__btn').click(function () {
+		if ($(this).attr('data-show') === "true") {
+			$(this).html("закрыть");
+			$(this).attr('data-show', "false");
+		}
+		else {
+			$(this).html("смотреть больше");
+			$(this).attr('data-show', "true");
+		}
+	});
+});
+
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
 });

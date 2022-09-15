@@ -269,6 +269,14 @@ $(document).ready(function () {
 });
 
 
+jQuery(($) => {
+	if ($(window).width() < 850.98) {
+		$('.menu__link-header-active').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+	}
+});
+
 
 // $('.header__burger').click(function (event) {
 // 	$('.header__burger,.header__menu').toggleClass('active');
