@@ -225,6 +225,35 @@ function ibg() {
 ibg();
 
 
+
+const rangeSlider = document.querySelector('.range-filter__slider');
+
+noUiSlider.create(rangeSlider, {
+	start: [0, 15],
+	connect: false,
+	range: {
+		'min': 0,
+		'max': 15
+	}
+});
+
+const priceStart = document.getElementById('price-start');
+const priceEnd = document.getElementById('price-end');
+priceStart.addEventListener('change', setPriceValues);
+priceEnd.addEventListener('change', setPriceValues);
+
+function setPriceValues() {
+	let priceStartValue;
+	let priceEndValue;
+	if (priceStart.value != '') {
+		priceStartValue = priceStart.value;
+	}
+	if (priceEnd.value != '') {
+		priceEndValue = priceEnd.value;
+	}
+	rangeSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+}
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
@@ -331,6 +360,18 @@ $(document).ready(function () {
 	});
 	$('.header-mobile-shopping__info-bottom-5').click(function (event) {
 		$('.mobile-shopping-hide-bottom-5').slideToggle(300);
+	});
+
+	$('.shopping-sale__btn-plus').click(function (event) {
+		$('.shopping-sale__btn-plus,.item-filter').toggleClass('active');
+	});
+
+	$('.checkbox1__label1').click(function (event) {
+		$('.checkbox1__list1,.checkbox1__label1').toggleClass('active');
+	});
+
+	$('.checkbox2__label2').click(function (event) {
+		$('.checkbox2__list2,.checkbox2__label2').toggleClass('active');
 	});
 
 
