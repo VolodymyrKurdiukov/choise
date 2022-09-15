@@ -385,6 +385,7 @@ $(document).ready(function () {
 			$(this).attr('data-show', "true");
 		}
 	});
+
 });
 
 jQuery(($) => {
