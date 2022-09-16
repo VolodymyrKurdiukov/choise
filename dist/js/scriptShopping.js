@@ -204,10 +204,12 @@ if (isMobile.any()) {
 const iconMenu = document.querySelector(".menu__icon");
 if (iconMenu) {
 	const menuBody = document.querySelector(".menu__body");
+	const subMenuBody = document.querySelector(".sub-menu");
 	iconMenu.addEventListener("click", function (e) {
 		document.body.classList.toggle("lock");
 		iconMenu.classList.toggle("active");
 		menuBody.classList.toggle("active");
+		subMenuBody.classList.remove("active");
 	});
 }
 //..........................................................................................................................
@@ -340,4 +342,15 @@ jQuery(($) => {
 			$(this).toggleClass('active').next().slideToggle(300);
 		});
 	}
+	$('.menu__sub-link-beauty').click(function (event) {
+		$('.sub-menu').addClass('active');
+	});
+	$('.sub-menu__back').click(function (event) {
+		$('.sub-menu').removeClass('active');
+	});
+	$('.sub-menu__title').click(function (event) {
+		$(this).toggleClass('active').next().slideToggle(300);
+	});
+
+
 });
