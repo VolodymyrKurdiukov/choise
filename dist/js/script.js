@@ -297,6 +297,7 @@ $(document).ready(function () {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
 
+
 	$('.liders__btn').click(function (event) {
 		$('.liders-hide').slideToggle(300);
 	});
@@ -317,5 +318,17 @@ jQuery(($) => {
 		$('.menu__link-header-active').click(function (event) {
 			$(this).toggleClass('active').next().slideToggle(300);
 		});
+
+
+		$('.menu__sub-link-beauty').click(function (event) {
+			$('.menu__sub-link-beauty,.sub-menu').toggleClass('active');
+		});
+		$('.sub-menu__title').click(function (event) {
+			$(this).toggleClass('active').next().slideToggle(300);
+		});
+
+		// $('.menu__sub-link-beauty').click(function (event) {
+		// 	$(this).toggleClass('active').next().slideToggle(300);
+		// });
 	}
 });
