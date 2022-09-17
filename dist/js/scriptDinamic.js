@@ -244,6 +244,140 @@ let swiperQualification = new Swiper(".qualificationSwiper", {
 });
 
 
+let ctxMain = document.querySelector('#myChart').getContext('2d');
+let myChart = new Chart(ctxMain, {
+	type: 'line',
+	data: {
+		labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+		datasets: [{
+			label: 'false',
+			data: [0, 200, 190, 170, 180, 160, 165, 170, 200, 210, 215, 210, 205, 200, 205, 220, 250, 305, 325, 320, 305, 300, 250, 240, 240, 240, 240, 230, 205, 180, 160],
+			backgroundColor: ['white'],
+			borderColor: ['#adc896'],
+			borderWidth: 4,
+			tension: 0.4,
+			radius: 0
+		}, {
+			label: 'false',
+			data: [0, 110, 130, 180, 230, 280, 300, 305, 305, 305, 305, 295, 285, 250, 240, 240, 240, 240, 240, 245, 285, 280, 305, 300, 295, 285, 275, 275, 280, 290, 300],
+			backgroundColor: ['white'],
+			borderColor: ['#6c7f6d'],
+			borderWidth: 4,
+			tension: 0.4,
+			radius: 0
+		}, {
+			type: 'bar',
+			label: 'Наивысший показатель',
+			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 320, 0, 0, 0, 0, 0, 0, 0],
+			backgroundColor: ['#cfdec3'],
+			categoryPercentage: 3
+		}, {
+			type: 'bar',
+			label: 'Самый низкий показатель',
+			data: [0, 0, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			backgroundColor: ['#cfdec3'],
+			categoryPercentage: 3
+		}
+		]
+	},
+	options: {
+		plugins: {
+			legend: {
+				display: false
+			}
+		},
+		elements: {
+			bar: {
+				borderRadius: 5
+			}
+		}
+	}
+});
+
+let ctxLeft = document.querySelector('#myCharLeft').getContext('2d');
+let myChartLeft = new Chart(ctxLeft, {
+	type: 'bar',
+	data: {
+		labels: ["Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь"],
+		datasets: [{
+			label: 'total',
+			data: [4000, 4000, 4000, 4000, 4000, 4000],
+			backgroundColor: ['#eaede9'],
+			borderColor: ['#eaede9'],
+			borderWidth: 0,
+			tension: 0.4,
+			grouped: false,
+			order: 1
+		}, {
+			label: 'Командный обьем',
+			data: [1400, 1700, 2000, 2500, 1400, 3400],
+			backgroundColor: ['#e3e1c6', '#98b089'],
+			borderColor: ['#e3e1c6', '#98b089'],
+			borderWidth: 0,
+			tension: 0.4,
+		},
+		]
+	},
+	options: {
+		plugins: {
+			legend: {
+				display: false
+			}
+		},
+		elements: {
+			bar: {
+				borderRadius: 10
+			}
+		}
+	}
+});
+
+let ctxRight = document.querySelector('#myCharRight').getContext('2d');
+let myChartRight = new Chart(ctxRight, {
+	type: 'bar',
+	data: {
+		labels: ["Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь", "Январь"],
+		datasets: [{
+			label: 'total',
+			data: [70, 70, 70, 70, 70, 70],
+			backgroundColor: ['#eaede9'],
+			borderColor: ['#eaede9'],
+			borderWidth: 0,
+			tension: 0.4,
+			grouped: false,
+			order: 3
+		}, {
+			label: 'false',
+			data: [30, 30, 25, 10, 40, 15],
+			backgroundColor: ['#738772'],
+			borderColor: ['#738772'],
+			borderWidth: 0,
+			tension: 0.4,
+		}, {
+			label: 'false',
+			data: [21, 15, 55, 40, 5, 60],
+			backgroundColor: ['#adc896'],
+			borderColor: ['#adc896'],
+			borderWidth: 0,
+			tension: 0.4,
+		}
+		]
+	},
+	options: {
+		plugins: {
+			legend: {
+				display: false
+			}
+		},
+		elements: {
+			bar: {
+				borderRadius: 10
+			}
+		}
+	}
+});
+
+
 $(document).ready(function () {
 	$('.lang-top__link').click(function (event) {
 		$(this).toggleClass('active').next().slideToggle(300);
