@@ -290,7 +290,21 @@ let myChart = new Chart(ctxMain, {
 			bar: {
 				borderRadius: 5
 			}
-		}
+		},
+		scales: {
+			x: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
+			},
+			y: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
+			}
+		},
 	}
 });
 
@@ -328,7 +342,21 @@ let myChartLeft = new Chart(ctxLeft, {
 			bar: {
 				borderRadius: 10
 			}
-		}
+		},
+		scales: {
+			x: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
+			},
+			y: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
+			}
+		},
 	}
 });
 
@@ -347,14 +375,14 @@ let myChartRight = new Chart(ctxRight, {
 			grouped: false,
 			order: 3
 		}, {
-			label: 'false',
+			label: 'Удалено',
 			data: [30, 30, 25, 10, 40, 15],
 			backgroundColor: ['#738772'],
 			borderColor: ['#738772'],
 			borderWidth: 0,
 			tension: 0.4,
 		}, {
-			label: 'false',
+			label: 'Зарегистрировано',
 			data: [21, 15, 55, 40, 5, 60],
 			backgroundColor: ['#adc896'],
 			borderColor: ['#adc896'],
@@ -372,6 +400,20 @@ let myChartRight = new Chart(ctxRight, {
 		elements: {
 			bar: {
 				borderRadius: 10
+			}
+		},
+		scales: {
+			x: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
+			},
+			y: {
+				beginAtZero: true,
+				grid: {
+					display: false
+				}
 			}
 		}
 	}
