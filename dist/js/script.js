@@ -240,7 +240,7 @@ let swiperExpert = new Swiper(".expertSwiper", {
 			slidesPerView: 2,
 		},
 		575.98: {
-			slidesPerView: 3,
+			slidesPerView: "auto",
 		},
 	},
 });
