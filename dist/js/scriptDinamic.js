@@ -250,33 +250,19 @@ let myChart = new Chart(ctxMain, {
 	data: {
 		labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
 		datasets: [{
-			label: 'false',
-			data: [0, 200, 190, 170, 180, 160, 165, 170, 200, 210, 215, 210, 205, 200, 205, 220, 250, 305, 325, 320, 305, 300, 250, 240, 240, 240, 240, 230, 205, 180, 160],
-			backgroundColor: ['white'],
-			borderColor: ['#adc896'],
-			borderWidth: 4,
-			tension: 0.4,
-			radius: 0
-		}, {
-			label: 'false',
-			data: [0, 110, 130, 180, 230, 280, 300, 305, 305, 305, 305, 295, 285, 250, 240, 240, 240, 240, 240, 245, 285, 280, 305, 300, 295, 285, 275, 275, 280, 290, 300],
-			backgroundColor: ['white'],
-			borderColor: ['#6c7f6d'],
-			borderWidth: 4,
-			tension: 0.4,
-			radius: 0
-		}, {
 			type: 'bar',
 			label: 'Наивысший показатель',
 			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 320, 0, 0, 0, 0, 0, 0, 0],
 			backgroundColor: ['#cfdec3'],
-			categoryPercentage: 3
+			categoryPercentage: 1.5
 		}, {
 			type: 'bar',
 			label: 'Самый низкий показатель',
 			data: [0, 0, 195, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 			backgroundColor: ['#cfdec3'],
-			categoryPercentage: 3
+			categoryPercentage: 1.5,
+			grouped: false,
+			order: 1
 		}
 		]
 	},
